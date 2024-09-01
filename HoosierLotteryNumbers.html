@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //creating variable lotteryNumbers
+    let forLooplotteryNumbers = "";
+
+    //Creating loop
+    for (let i = 0; i < 6; i++) {
+        //Generating random numbers
+        let randomNumber = Math.floor(Math.random() * 49) + 1;
+
+        //Adding random numbers to the string
+        forLooplotteryNumbers += randomNumber + " ";
+    }
+    // Display the string
+    document.body.innerHTML += `<h1>Lottery Numbers (For Loop): ${forLooplotteryNumbers.trim()}</h1>`;
+
+    let whileLooplotteryNumbers = "";
+    let count = 0;
+    while (count < 6) {
+        let randomNumber = Math.floor(Math.random() * 49) + 1;
+
+        whileLooplotteryNumbers += randomNumber + " ";
+        count++;
+    }
+    document.body.innerHTML += `<h1>Lottery Numbers (While Loop): ${whileLooplotteryNumbers.trim()}</h1>`;
+
+</script>
