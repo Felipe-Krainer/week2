@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //Receives input from the user / first number
+    let numFirst = prompt("Enter first number: ");
+    //Checking if input is valid / first number
+    if (!(isNaN(numFirst))) {
+        numFirst = parseInt(numFirst);
+        //Receives input from the user / operator
+        let operator = prompt("Enter operator: ");
+        //Checking if input is valid / operator
+        if (operator === "+" || operator === "-" || operator === "*" || operator === "/") {
+            //Receives input from the user / second number
+            let numSecond = prompt("Enter second number: ");
+            //Checking if input is valid / second number 
+            if (!(isNaN(numSecond))){
+                numSecond = parseInt(numSecond);
+
+                //Calculating
+                let result;
+                switch (operator) {
+                    case "+":
+                        result = numFirst + numSecond;
+                        alert(`The result of ${numFirst} ${operator} ${numSecond} is: ${result}`);
+                        break;
+                    case "-":
+                        result = numFirst - numSecond;
+                        alert(`The result of ${numFirst} ${operator} ${numSecond} is: ${result}`);
+                        break;
+                    case "*":
+                        result = numFirst * numSecond;
+                        alert(`The result of ${numFirst} ${operator} ${numSecond} is: ${result}`);
+                        break;
+                    case "/":
+                        result = numFirst / numSecond;
+                        alert(`The result of ${numFirst} ${operator} ${numSecond} is: ${result}`);
+                        break;
+                }
+            }
+            else
+             alert("Invalid input. Please enter a valid number");
+        }
+        else
+            alert("Invalid operator. Please enter a valid operator (+, -, *, /)");
+    }
+    else
+        alert("Invalid input. Please enter a valid number")
+
+</script>
